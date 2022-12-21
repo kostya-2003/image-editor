@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Editor in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container disable">
+        <h2>Image Editor App</h2>
+        <div class="wrapper">
+            <div class="preview-img">
+                <img src="./src/img/img.jpg" alt="">
+            </div>
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <select id="brightness" class="options">
+                        <option>Brightness</option>
+                        <option>Saturation</option>
+                        <option>Inversion</option>
+                        <option>Grayscale</option>
+                    </select>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brighteness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left"><i class='bx bx-rotate-left'></i></button>
+                        <button id="right"><i class='bx bx-rotate-right'></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="reset-filter"><i class='bx bx-refresh'></i></button>
+                <button class="choose-img"><i class='bx bx-upload'></i></button>
+                <button class="save-img"><i class='bx bx-save' ></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="dist/all.js"></script>
+  </body>
+</html>
